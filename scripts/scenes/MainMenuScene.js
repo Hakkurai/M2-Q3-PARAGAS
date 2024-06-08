@@ -18,13 +18,13 @@ class MainMenuScene extends Phaser.Scene {
         
         if (!this.bgm || !this.bgm.isPlaying) {
             
-            this.bgm = this.sound.add('bgm', { loop: true, volume: 0.2 }); 
+            this.bgm = this.sound.add('bgm', { loop: true, volume: 0.06 }); 
             this.bgm.play();
         }
         const mainmenu1 = this.add.image(400, 300, 'mainmenu').setDisplaySize(800, 600);
 
         const playButton = this.add.image(400, 200, 'playButton').setInteractive();
-        playButton.setPosition(this.sys.game.config.width / 2, this.sys.game.config.height - 150);
+        playButton.setPosition(this.sys.game.config.width / 2, this.sys.game.config.height - 250);
 
         playButton.on('pointerdown', () => {
             
