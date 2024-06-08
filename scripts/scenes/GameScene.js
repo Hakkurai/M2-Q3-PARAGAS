@@ -50,9 +50,9 @@ class GameScene extends Phaser.Scene {
         this.score = 0;
         this.collectibleCount = 0;
     
-        this.scoreText = this.add.text(16, 16, 'Score: 0', { fontSize: '32px', fill: '#152238' }).setScrollFactor(0);
+        this.scoreText = this.add.text(16, 16, 'Score: 0', { fontSize: '32px', fill: '#FFFFFF' }).setScrollFactor(0);
         this.collectibleImage = this.add.image(40, 80, 'collect').setScrollFactor(0);
-        this.collectibleText = this.add.text(70, 60, 'x 0', { fontSize: '32px', fill: '#152238' }).setScrollFactor(0);
+        this.collectibleText = this.add.text(70, 60, 'x 0', { fontSize: '32px', fill: '#FFFFFF' }).setScrollFactor(0);
     
         this.cameras.main.startFollow(this.player);
         this.cameras.main.setBounds(0, 0, map.widthInPixels, map.heightInPixels);
