@@ -21,7 +21,7 @@ class GameOverScene extends Phaser.Scene {
         const score = data.score;
 
         
-        const scoreText = this.add.text(400, 200, 'Score: ' + score, {fontSize: '32px', fill: '#fff' });
+        const scoreText = this.add.text(400, 300, 'Score: ' + score, {fontSize: '32px', fill: '#fff' });
         scoreText.setOrigin(0.5);
 
         
