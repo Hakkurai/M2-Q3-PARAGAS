@@ -31,8 +31,7 @@ class GameScene extends Phaser.Scene {
         waterLayer.setCollisionByProperty({ collides: true });
     
         const collectiblesLayer = map.createLayer('milkbottle', tileset);
-    
-        collectiblesLayer.setTileIndexCallback([4], this.collectCollectible, this);
+        collectiblesLayer.setTileIndexCallback([2], this.collectCollectible, this);
     
         this.gameBgm = this.sound.add('gameBGM', { loop: true, volume: 0.1 });
         this.gameBgm.play();
@@ -57,6 +56,7 @@ class GameScene extends Phaser.Scene {
         this.cameras.main.startFollow(this.player);
         this.cameras.main.setBounds(0, 0, map.widthInPixels, map.heightInPixels);
         this.cameras.main.setZoom(1);
+        this.cameras.main.setBackgroundColor('#87CEEB'); 
     
         // Add cursor keys for player movement
         this.cursors = this.input.keyboard.createCursorKeys();
